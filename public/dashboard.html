@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprovação Agente ADM</title>
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <button class="hamburger" id="menu-toggle">☰</button>
+        <h1 class="title">Bem vinda, Mariana!</h1>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="dashboard.html"><i class="fas fa-home"></i> Início</a></li>
+            <li><a href="cronograma.html"><i class="fas fa-calendar-alt"></i> Cronograma</a></li>
+            <li><a href="disciplinas.html"><i class="fas fa-book"></i> Disciplinas</a></li>
+            <li><a href="pdfs.html"><i class="fas fa-file-pdf"></i> Gerenciar PDFs</a></li>
+            <li><a href="pf-history.html"><i class="fas fa-history"></i> História da PF</a></li>
+            <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+        </ul>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <div class="dashboard-container">
+            <picture>
+                <!-- Imagem para celulares -->
+                <source srcset="images/dashboard2.png" media="(max-width: 768px)">
+                <!-- Imagem para desktops -->
+                <img src="assets/images/dashboard.png" alt="Dashboard" class="dashboard-img">
+            </picture>
+        </div>        
+    </main>
+
+  <!-- Ícone Flutuante do Telegram -->
+<a href="https://t.me/pf_agente_adm" class="telegram-float" target="_blank">
+<img src="assets/images/telegram.png">
+</a>
+
+
+
+    <script src="assets/scripts/main.js"></script>
+</body>
+</html>

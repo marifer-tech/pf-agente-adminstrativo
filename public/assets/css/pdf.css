@@ -1,0 +1,211 @@
+/* Reset e Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: #4B5320;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.title {
+    flex: 1;
+    text-align: center;
+    font-size: 0.5rem;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #4B5320;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    width: 250px;
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #3a4120;
+}
+
+.hamburger {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    max-width: 900px;
+    margin: 80px auto 30px auto; /* Aumentei a margem superior para evitar sobreposição */
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.main-content h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.main-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Lista de Disciplinas */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Aumenta o espaçamento entre os botões */
+}
+
+.accordion-btn {
+    background-color: #4B5320;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-btn:hover {
+    background-color: #3a4120;
+    transform: scale(1.02);
+}
+
+/* Painel Expandido */
+.panel {
+    display: none;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #4B5320;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Lista de PDFs */
+.pdf-list {
+    list-style: none;
+    padding: 0;
+}
+
+.pdf-list li {
+    padding: 12px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+    text-align: left;
+    transition: box-shadow 0.3s ease;
+}
+
+.pdf-list li:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-list li a {
+    color: #4B5320;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.pdf-list li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade para Celulares (até 768px) */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 15px;
+    }
+
+    .accordion-btn {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+/* Responsividade para Celulares Pequenos (até 480px) */
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.3rem;
+    }
+
+    .header p {
+        font-size: 0.9rem;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .accordion-btn {
+        font-size: 0.95rem;
+        padding: 8px;
+    }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Aprovação Agente ADM</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+    <!-- Cabeçalho com mensagem motivacional -->
+    <div class="header">
+        <div class="marquee">
+            <span>"O seu começo parecerá modesto, mas o seu futuro será de grande prosperidade. Jó 8:7"</span>
+        </div>
+    </div>
+
+    <!-- Container de login -->
+    <div class="login-container">
+        <div class="login-card">
+            <h1 class="login-title">APROVAÇÃO AGENTE ADM</h1>
+            <img src="assets/images/police-logo.png" alt="Logo" class="login-image">
+            <p>MARIANA FERNANDA DA SILVA</p>
+
+            <!-- Formulário de login -->
+            <form id="login-form">
+                <input type="text" id="username" class="login-input" placeholder="Usuário" required>
+                <input type="password" id="password" class="login-input" placeholder="Senha" required>
+                <button type="submit" class="login-button">Entrar</button>
+                <p id="error-message" class="error-message"></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/scripts/login.js"></script>
+</body>
+</html>

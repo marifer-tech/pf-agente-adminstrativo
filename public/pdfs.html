@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar PDFs - Aprovação Agente ADM</title>
+    <link rel="stylesheet" href="assets/css/pdf.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <button class="hamburger" id="menu-toggle">☰</button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="dashboard.html"><i class="fas fa-home"></i> Início</a></li>
+            <li><a href="cronograma.html"><i class="fas fa-calendar-alt"></i> Cronograma</a></li>
+            <li><a href="disciplinas.html"><i class="fas fa-book"></i> Disciplinas</a></li>
+            <li><a href="pdfs.html"><i class="fas fa-file-pdf"></i> Gerenciar PDFs</a></li>
+            <li><a href="pf-history.html"><i class="fas fa-history"></i> História da PF</a></li>
+            <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+        </ul>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <h2>📂 Gerenciar PDFs</h2>
+        <p>Selecione uma disciplina para ver os materiais disponíveis:</p>
+
+        <!-- Disciplinas como botões expansíveis -->
+        <div class="accordion">
+            <button class="accordion-btn">📂 Apostilas Completas</button>
+            <div class="panel">
+                <ul class="pdf-list">
+                    <li><a href="assets/pdf/policiafederal-agenteadministrativo.pdf" target="_blank">Apostila Completa 1</a></li>
+                    <li><a href="assets/" target="_blank">Building...</a></li>
+                </ul>
+            </div>
+
+        <div class="accordion">
+            <button class="accordion-btn">📘 Português</button>
+            <div class="panel">
+                <ul class="pdf-list">
+                    <li><a href="" target="_blank">Building...</a></li>
+                </ul>
+            </div>
+
+            <button class="accordion-btn">💻 Noções de Informática</button>
+            <div class="panel">
+                <ul class="pdf-list">
+                    <li><a href="assets/pdf/informatica.pdf" target="_blank">Informática | Gran Concursos</a></li>
+                <li><a href="" target="_blank">Building...</a></li>
+
+                </ul>
+            </div>
+
+            <button class="accordion-btn">🧠 Raciocínio Lógico</button>
+            <div class="panel">
+                <ul class="pdf-list">
+                    <li><a href="" target="_blank">Building...</a></li>
+                </ul>
+            </div>
+
+            <button class="accordion-btn">🌍 Atualidades</button>
+            <div class="panel">
+                <ul class="pdf-list">
+                    <li><a href="" target="_blank">Building...</a></li>
+                </ul>
+            </div>
+
+            <button class="accordion-btn">⚖️ Noções de Direito Administrativo</button>
+            <div class="panel">
+                <ul class="pdf-list">
+                    <li><a href="assets/pdf/direito-adminstrativo.pdf">Direito Adminstrativo | Gran Concursos</a></li>
+                    <li><a href="" target="_blank">Building...</a></li>
+                </ul>
+            </div>
+
+            <button class="accordion-btn">📜 Noções de Direito Constitucional</button>
+            <div class="panel">
+                <ul class="pdf-list">
+                    <li><a href="assets/pdf/direito-constitucional.pdf" target="_blank">Direito Constitucional | Gran Concursos</a></li>
+                    <li><a href="" target="_blank">Building...</a></li>
+                </ul>
+            </div>
+
+            <button class="accordion-btn">💼 Noções de Administração</button>
+            <div class="panel">
+                <ul class="pdf-list">
+                    <li><a href="" target="_blank">Building...</a></li>
+                </ul>
+            </div>
+
+            <button class="accordion-btn">📑 Arquivologia</button>
+            <div class="panel">
+                <ul class="pdf-list">
+                    <li><a href="">Introdução a Arquiviologia</a></li>
+                    <li><a href="" target="_blank">Building...</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/scripts/pdf.js"></script>
+    <script src="assets/scripts/main.js"></script>
+</body>
+</html>
