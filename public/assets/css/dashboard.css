@@ -137,8 +137,8 @@ body {
 /* Para dispositivos menores, altera a imagem */
 @media (max-width: 768px) {
     .dashboard-img {
-        content: url("assets/images/dashboard2.png");
-        width: 100%;
+        content: url("https://imgur.com/a/Hp6hFaj");
+        width: 90%;
         max-width: 320px;
     }
 }
