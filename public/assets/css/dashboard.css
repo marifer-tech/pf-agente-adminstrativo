@@ -202,6 +202,37 @@ h1, h2, h3 {
   transform: scale(1.1);
 }
 
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(26, 62, 140, 0.2);
+}
+
+.btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(26, 62, 140, 0.3);
+}
+
+.btn i {
+  margin-left: 8px;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
 /* Responsividade */
 @media (max-width: 992px) {
   .sidebar {
@@ -249,3 +280,4 @@ h1, h2, h3 {
     right: 1.5rem;
   }
 }
+
