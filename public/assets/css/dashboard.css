@@ -1,225 +1,251 @@
-/* Reset de estilos */
+/* Variáveis de cores e estilos */
+:root {
+  --primary-color: #4B5320; /* Verde militar */
+  --primary-dark: #3d4518;
+  --primary-light: #6b7540;
+  --text-light: #ffffff;
+  --text-dark: #333333;
+  --bg-color: #ffffff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+/* Reset e Base */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #ffffff;
-    color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+}
+
+/* Tipografia */
+h1, h2, h3 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Layout Principal */
+.app-container {
+  display: flex;
+  min-height: 100vh;
 }
 
 /* Cabeçalho */
 .header {
-    background-color: #4B5320;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow);
 }
 
 .title {
-    flex: 1;
-    text-align: center;
-    font-size: 1.5rem;
+  flex: 1;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
-.hamburger {
-    background-color: transparent;
-    color: white;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
+/* Botão do Menu */
+.menu-toggle {
+  background-color: transparent;
+  color: var(--text-light);
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.menu-toggle:hover {
+  background-color: var(--primary-dark);
 }
 
 /* Sidebar */
 .sidebar {
-    background-color: #4B5320;
-    color: white;
-    position: fixed;
-    top: 0;
-    left: -250px;
-    height: 100%;
-    width: 250px;
-    padding: 20px;
-    transition: left 0.3s ease-in-out;
-    z-index: 999;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  position: fixed;
+  top: 0;
+  left: -300px;
+  height: 100%;
+  width: 300px;
+  padding: 1.5rem;
+  transition: var(--transition);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar.open {
-    left: 0;
+  left: 0;
 }
 
-.sidebar h2 {
-    text-align: center;
-    margin-bottom: 20px;
+.sidebar-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.sidebar ul {
-    list-style: none;
-    padding: 0;
+.sidebar-nav {
+  flex-grow: 1;
 }
 
-.sidebar ul li {
-    margin-bottom: 15px;
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
 }
 
-.sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    display: block;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+.nav-item {
+  margin-bottom: 0.5rem;
 }
 
-.sidebar ul li a:hover {
-    background-color: #3d4518;
+.nav-link {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  transition: var(--transition);
 }
 
-.menu {
-    list-style: none;
-    padding: 0;
-    margin-top: 60px; /* Espaço para o cabeçalho */
+.nav-link:hover {
+  background-color: var(--primary-dark);
+  transform: translateX(5px);
 }
 
-.menu li {
-    margin-bottom: 20px;
-}
-
-.menu li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    display: block;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.menu li a:hover {
-    background-color: #3d4518;
+.nav-link i {
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+  width: 24px;
+  text-align: center;
 }
 
 /* Conteúdo Principal */
 .main-content {
-    margin-top: 60px; /* Espaço para o cabeçalho */
-    padding: 20px;
-    transition: margin-left 0.3s ease-in-out;
+  margin-top: 70px;
+  padding: 2rem;
+  width: 100%;
+  transition: var(--transition);
 }
-
-/* Centralizar e aumentar a imagem da dashboard */
-.dashboard-container {
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    text-align: center;
-    width: 100%;
-    margin-top: 5px;
-}
-
-.dashboard-img {
-    width: 50%; /* Ajuste dinâmico */
-    max-width: 950px; /* Limite para evitar distorção */
-    height: auto; /* Mantém a proporção */
-    display: block;
-}
-
-/* Para dispositivos menores, altera a imagem */
-@media (max-width: 768px) {
-    .dashboard-img {
-        content: url("https://i.imgur.com/H5IeXcz.png");
-        width: 90%;
-        max-width: 320px;
-    }
-}
-
-@media (max-width: 480px) {
-    .dashboard-img {
-        width: 90%;
-        max-width: 320px;
-    }
-}
-
 
 .main-content.open {
-    margin-left: 250px;
+  margin-left: 300px;
+}
+
+/* Dashboard Image */
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 .dashboard-img {
-    width: 950px;
-}
-/* Barra de Progresso */
-.progress-container {
-    background-color: #e0e0e0;
-    border-radius: 25px;
-    height: 30px;
-    overflow: hidden;
-    margin: 20px 0;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
 }
 
-.progress-bar {
-    background-color: #4B5320;
-    color: white;
-    text-align: center;
-    height: 100%;
-    line-height: 30px;
-    font-size: 0.9rem;
+.dashboard-img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Ícone do Telegram */
+.telegram-float {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #28A8E8;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  transition: var(--transition);
+  z-index: 1000;
+}
+
+.telegram-float img {
+  width: 70%;
+  height: auto;
+}
+
+.telegram-float:hover {
+  background-color: #1E8FC6;
+  transform: scale(1.1);
 }
 
 /* Responsividade */
+@media (max-width: 992px) {
+  .sidebar {
+    width: 280px;
+    left: -280px;
+  }
+  
+  .main-content.open {
+    margin-left: 280px;
+  }
+}
+
 @media (max-width: 768px) {
-    .main-content {
-        margin-left: 0;
-    }
-
-    .sidebar {
-        width: 100%;
-        left: -100%;
-    }
-
-    .sidebar.open {
-        left: 0;
-    }
+  .sidebar {
+    width: 100%;
+    left: -100%;
+  }
+  
+  .main-content.open {
+    margin-left: 0;
+  }
+  
+  .dashboard-img {
+    max-width: 100%;
+  }
+  
+  .header {
+    padding: 1rem;
+  }
+  
+  .title {
+    font-size: 1.3rem;
+  }
 }
 
-/* Ícone Flutuante do Telegram */
-.telegram-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #28b8e3;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    text-decoration: none;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    z-index: 1000;
+@media (max-width: 480px) {
+  .main-content {
+    padding: 1rem;
+  }
+  
+  .telegram-float {
+    width: 50px;
+    height: 50px;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
 }
-
-/* Ajusta o tamanho da imagem */
-.telegram-float img {
-    width: 100%; /* Ajusta dinamicamente o tamanho da imagem */
-    height: auto;
-}
-
-/* Efeito ao passar o mouse */
-.telegram-float:hover {
-    background-color: #28b8e3;
-    transform: scale(1.1);
-}
-
-

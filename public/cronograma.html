@@ -1,92 +1,158 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cronograma de Estudos - PF</title>
-    <link rel="stylesheet" href="assets/css/cronograma.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cronograma PF - Agente Administrativo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f8f9fa;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .cronograma-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .cronograma-table th, .cronograma-table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .cronograma-table th {
+      background-color: #34495e;
+      color: white;
+    }
+
+    .week-header td {
+      background-color: #dfe6e9;
+      font-weight: bold;
+      text-align: center;
+      color: #2d3436;
+    }
+
+    .prova-day {
+      background-color: #27ae60;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header class="header">
-        <button class="hamburger" id="menu-toggle">☰</button>
-    </header>
+  <h1>Cronograma de Estudos - Polícia Federal</h1>
 
-    <!-- Sidebar -->
-    <aside class="sidebar" id="sidebar">
-        <h2>Menu</h2>
-        <ul>
-            <li><a href="dashboard.html"><i class="fas fa-home"></i> Início</a></li>
-            <li><a href="cronograma.html"><i class="fas fa-calendar-alt"></i> Cronograma</a></li>
-            <li><a href="disciplinas.html"><i class="fas fa-book"></i> Disciplinas</a></li>
-            <li><a href="pdfs.html"><i class="fas fa-file-pdf"></i> Gerenciar PDFs</a></li>
-            <li><a href="pf-history.html"><i class="fas fa-history"></i> História da PF</a></li>
-            <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
-        </ul>
-    </aside>
+  <table class="cronograma-table">
+    <thead>
+      <tr>
+        <th>Semana</th>
+        <th>Foco Principal</th>
+        <th>Matérias Complementares</th>
+        <th>Meta Diária</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Semana 1 -->
+      <tr class="week-header">
+        <td colspan="4">Semana 1 - Base Conceitual (18/05 a 24/05)</td>
+      </tr>
+      <tr>
+        <td>18/05 (Sáb)</td>
+        <td>Português (Interpretação + Gramática)</td>
+        <td>Atualidades (Leitura de notícias)</td>
+        <td>20 questões + resumo</td>
+      </tr>
+      <tr>
+        <td>19/05 (Dom)</td>
+        <td colspan="2">Revisão Geral + Simulado (3h)</td>
+        <td>100 questões mistas</td>
+      </tr>
+      <tr>
+        <td>20/05 (Seg)</td>
+        <td>Direito Administrativo (Princípios + Atos)</td>
+        <td>Ética no Serviço Público</td>
+        <td>20 questões + mapa mental</td>
+      </tr>
+      <tr>
+        <td>21/05 (Ter)</td>
+        <td>Raciocínio Lógico (Lógica Proposicional)</td>
+        <td>Informática (Windows + Office)</td>
+        <td>15 questões cada</td>
+      </tr>
+      <tr>
+        <td>22/05 (Qua)</td>
+        <td>Direito Constitucional (Arts. 5º, 37, 144)</td>
+        <td>Legislação PF (Lei 7.102/1983)</td>
+        <td>20 questões + resumo</td>
+      </tr>
+      <tr>
+        <td>23/05 (Qui)</td>
+        <td>Gestão de Pessoas (Modelos + Processos)</td>
+        <td>Governança Pública</td>
+        <td>20 questões</td>
+      </tr>
+      <tr>
+        <td>24/05 (Sex)</td>
+        <td>Português (Concordância + Regência)</td>
+        <td>Redação Oficial</td>
+        <td>20 questões</td>
+      </tr>
 
-    <!-- Conteúdo Principal -->
-    <main class="main-content">
-        <h2>📚 Cronograma de Estudos</h2>
-        <p>Foque em uma disciplina por dia e resolva pelo menos <strong>20 questões diárias</strong>. Aos domingos, faça uma revisão completa e um simulado.</p>
-
-        <table class="cronograma-table">
-            <thead>
-                <tr>
-                    <th>📅 Dia</th>
-                    <th>📖 Matéria</th>
-                    <th>🎯 Atividade no Trabalho</th>
-                    <th>✅ Revisão Pós-Faculdade</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Segunda-feira</td>
-                    <td>🧠 Raciocínio Lógico</td>
-                    <td>20 questões e revisão de erros</td>
-                    <td>Simulado pequeno</td>
-                </tr>
-                <tr>
-                    <td>Terça-Feira</td>
-                    <td>📡 Informática + Legislação PF</td>
-                    <td>Resumo + 15 questões cada</td>
-                    <td>Flashcards e revisão</td>
-                </tr>
-                <tr>
-                    <td>Quarta-feira</td>
-                    <td>⚖️ Noções de Direito Constitucional</td>
-                    <td>Leitura da CF + 20 questões</td>
-                    <td>Mapa mental e revisão de artigos-chave</td>
-                </tr>
-                <tr>
-                    <td>Quinta-feira</td>
-                    <td>🏛️ Noções de Administração Pública</td>
-                    <td>Resumo + 15 questões</td>
-                    <td>Revisão antes de dormir</td>
-                </tr>
-                <tr>
-                    <td>Sexta-feira</td>
-                    <td>📌 Língua Portuguesa</td>
-                    <td>Leitura + 20 questões</td>
-                    <td>Revisão rápida (interpretação e gramática)</td>
-                </tr>
-                <tr>
-                    <td>Sábado</td>
-                    <td>💻 Noções de Direito Administrativo</td>
-                    <td>Resumo de princípios + 20 questões</td>
-                    <td>Flashcards e revisão de erros</td>
-                </tr>
-                <tr>
-                    <td>Domingo</td>
-                    <td>📌 Revisão + Simulado</td>
-                    <td>Questões erradas da semana</td>
-                    <td>Simulado de 2h</td>
-                </tr>
-            </tbody>
-        </table>
-    </main>
-
-    <script src="assets/scripts/main.js"></script>
+      <!-- Semana Final -->
+      <tr class="week-header">
+        <td colspan="4">Semana Final - Revisão Intensiva (23/06 a 29/06)</td>
+      </tr>
+      <tr>
+        <td>23/06 (Seg)</td>
+        <td colspan="2">Simulado Geral (4h)</td>
+        <td>120 questões</td>
+      </tr>
+      <tr>
+        <td>24/06 (Ter)</td>
+        <td>Revisão de Erros</td>
+        <td>Pontos Fracos</td>
+        <td>Análise detalhada</td>
+      </tr>
+      <tr>
+        <td>25/06 (Qua)</td>
+        <td>Legislação PF (Leis 10.357, 6.815)</td>
+        <td>Direito Administrativo</td>
+        <td>Resumos visuais</td>
+      </tr>
+      <tr>
+        <td>26/06 (Qui)</td>
+        <td>Português (Últimos ajustes)</td>
+        <td>Redação Oficial</td>
+        <td>Casos práticos</td>
+      </tr>
+      <tr>
+        <td>27/06 (Sex)</td>
+        <td>Simulado Final (5h)</td>
+        <td>Controle de Tempo</td>
+        <td>Prova completa</td>
+      </tr>
+      <tr>
+        <td>28/06 (Sáb)</td>
+        <td>Revisão Leve</td>
+        <td>Descanso ativo</td>
+        <td>Mapas mentais</td>
+      </tr>
+      <tr>
+        <td>29/06 (Dom)</td>
+        <td colspan="3" class="prova-day">DIA DA PROVA - Confiança e Foco!</td>
+      </tr>
+    </tbody>
+  </table>
 </body>
 </html>

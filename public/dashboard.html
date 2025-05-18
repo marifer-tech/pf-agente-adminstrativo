@@ -6,45 +6,84 @@
     <title>Aprovação Agente ADM</title>
     <link rel="stylesheet" href="assets/css/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header class="header">
-        <button class="hamburger" id="menu-toggle">☰</button>
-        <h1 class="title">Bem vinda, Mariana!</h1>
-    </header>
+    <div class="app-container">
+        <!-- Cabeçalho -->
+        <header class="header">
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <h1 class="title">Bem-vinda, Mariana!</h1>
+        </header>
 
-    <!-- Sidebar -->
-    <aside class="sidebar" id="sidebar">
-        <h2>Menu</h2>
-        <ul>
-            <li><a href="dashboard.html"><i class="fas fa-home"></i> Início</a></li>
-            <li><a href="cronograma.html"><i class="fas fa-calendar-alt"></i> Cronograma</a></li>
-            <li><a href="disciplinas.html"><i class="fas fa-book"></i> Disciplinas</a></li>
-            <li><a href="pdfs.html"><i class="fas fa-file-pdf"></i> Gerenciar PDFs</a></li>
-            <li><a href="pf-history.html"><i class="fas fa-history"></i> História da PF</a></li>
-            <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
-        </ul>
-    </aside>
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Menu de Navegação</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="dashboard.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Início</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cronograma.html" class="nav-link">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Cronograma</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="disciplinas.html" class="nav-link">
+                            <i class="fas fa-book"></i>
+                            <span>Disciplinas</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pdfs.html" class="nav-link">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Gerenciar PDFs</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pf-history.html" class="nav-link">
+                            <i class="fas fa-history"></i>
+                            <span>História da PF</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Sair</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
 
-    <!-- Conteúdo Principal -->
-    <main class="main-content">
-        <div class="dashboard-container">
-            <picture>
-                <!-- Imagem para celulares -->
-                <source srcset="images/dashboard2.png" media="(max-width: 768px)">
-                <!-- Imagem para desktops -->
-                <img src="assets/images/dashboard.png" alt="Dashboard" class="dashboard-img">
-            </picture>
-        </div>        
-    </main>
+        <!-- Conteúdo Principal -->
+        <main class="main-content" id="main-content">
+            <div class="dashboard-container">
+                <picture>
+                    <!-- Imagem para dispositivos móveis -->
+                    <source srcset="assets/images/dashboard-mobile.png" media="(max-width: 768px)">
+                    <!-- Imagem padrão para desktop -->
+                    <img src="assets/images/dashboard.png" alt="Dashboard de Estudos" class="dashboard-img">
+                </picture>
+            </div>
+        </main>
 
-  <!-- Ícone Flutuante do Telegram -->
-<a href="https://t.me/pf_agente_adm" class="telegram-float" target="_blank">
-<img src="assets/images/telegram.png">
-</a>
-
-
+        <!-- Ícone Flutuante do Telegram -->
+        <a href="https://t.me/pf_agente_adm" class="telegram-float" target="_blank" aria-label="Grupo do Telegram">
+            <img src="assets/images/telegram.png" alt="Ícone do Telegram">
+        </a>
+    </div>
 
     <script src="assets/scripts/main.js"></script>
 </body>
